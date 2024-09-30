@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Fitness and Wellness" />
+  <meta name="description" content="Fitness and Wellness" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" th:href="@{/css/style.css}"/>
+  <link rel="stylesheet" th:href="@{/css/login.css}"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link id='favicon' rel="shortcut icon" href="./static/images/lo2.JPG" type="image/lo2.jpg">
+  <title>Fitness and Wellness</title>
+</head>
+<body oncontextmenu="return false">
+
+<!-- pre loader -->
+<!-- <div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div> -->
+
+<!-- navbar starts -->
+<header>
+  <a href="/" class="logo"><i class='fas fa-running'></i> Fitness and Wellness </a>
+
+  <div id="menu" class="fas fa-bars"></div>
+  <nav class="navbar">
+    <ul>
+      <li><a  href="/">Home</a></li>
+      <li><a href="" class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login/Signup</a></li>
+
+
+    </ul>
+  </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- hero section starts -->
+<section class="home" id="home">
+  <div id="particles-js"></div>
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <div class="signup">
+      <form th:action="@{/signup}" method="post">
+        <label for="chk" aria-hidden="true">Sign up</label>
+        <input type="text" id="username" name="username" placeholder="User name" required="">
+        <input type="email" id="email" name="email" placeholder="Email" required="">
+        <input type="password" name="password" id="password" placeholder="Password" required="">
+        <button type="submit">Sign up</button>
+      </form>
+<p th:if="${error2}" th:text="${error2}" style="color: red;  text-align: center;
+      "></p>
+      <p th:if="${message}" th:text="${message}" style="color: green;  text-align: center;
+      "></p>
+    </div>
+
+    <div class="login">
+ 
+      <form th:action="@{/login}" method="post">
+        <label for="chk" aria-hidden="true">Login</label>
+        <input type="text" name="username"placeholder="username" required="">
+        <input type="password" name="password" placeholder="password" required="">
+        <button type="submit">Login</button>
+      </form>
+      <p th:if="${error}" th:text="${error}" style="color: red;  text-align: center;
+      "></p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- hero section ends -->
+
+
+
+
+<!-- footer section starts -->
+<section class="footer">
+
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/ram-kumar-1a43a925a"> Ram Kumar</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+></script>
+<!-- particle.js links -->
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+
+<script type="text/javascript" th:src="@{/jss/particles.min.js}"></script>
+<script type="text/javascript" th:src="@{/jss/app.js}"></script>
+<script type="text/javascript" th:src="@{/jss/script.js}"></script>
+<script >
+// Wait for the page to load
+window.onload = function() {
+    // Find the message element
+    var successMessage = document.getElementById('successMessage');
+    
+    // If the message exists, set a timer to hide it after 2 seconds
+    if (successMessage) {
+        setTimeout(function() {
+            successMessage.style.display = 'none';
+        }, 2000); // 2000 milliseconds = 2 seconds
+    }
+};
+</script>
+</body>
+</html>
+

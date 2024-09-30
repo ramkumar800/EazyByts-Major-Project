@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Fitness and Wellness" />
+  <meta name="description" content="Fitness and Wellness" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" th:href="@{/css/style.css}"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link id='favicon' rel="shortcut icon" th:href="@{/images/lo2.jpg}" type="image/x-png">
+  <title>Fitness and Wellness</title>
+</head>
+<body oncontextmenu="return false">
+
+<!-- navbar starts -->
+<header>
+  <a href="/" class="logo"><i class='fas fa-running'></i> Fitness and Wellness </a>
+
+  <div id="menu" class="fas fa-bars"></div>
+  <nav class="navbar">
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#about">Workout Plans</a></li>
+      <li><a href="#experience">Nutrition Information</a></li>
+      <li><a href="#education">Community Interaction</a></li>
+
+      <!--       <li><a href="#work">Work</a></li>
+              <li><a href="#experience">Experience</a></li>-->
+      <li><a href="#contact">Contact</a></li>
+  
+       
+       <li><a href="/logout">Logout</a></li>
+          
+  <h1> <span th:text="${username}"></span></h1>
+    </ul>
+  </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- hero section starts -->
+<section class="home" id="home">
+  <div id="particles-js"></div>
+
+  <div class="content">
+    <h2>Welcome to ,<br/> Fitness and <span>Wellness</span></h2>
+    <p>Your Partner in Achieving a Healthier Life <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>Workout Plans</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+
+  </div>
+  <div class="image">
+    <img alt="Fitness Image" draggable="false" class="tilt" th:src="@{/images/fitness.jpg}"/>
+
+  </div>
+</section>
+<!-- hero section ends -->
+
+
+<!-- about section starts -->
+<section class="about" id="about">
+  <h2 class="heading"><i class='fas fa-heartbeat'></i> Workout  <span>Plans</span><br>Week 1: Foundation</h2>
+
+  <div class="row">
+
+ <!-- 1 -->
+    <div class="content">
+ 
+      <span class="tag">Day 1: Full-Body Strength Training</span>
+
+      <p># </p>
+
+      <div class="box-container">
+
+        <div class="box">
+          <p><span> Warm-up (5-10 min):  </span> Jumping jacks, bodyweight squats, arm circles.</p>
+          <p><span> Workout : </span>
+Squats: 3 sets of 12 reps<br>
+Push-ups (modified if needed): 3 sets of 10 reps<br>
+Dumbbell Rows: 3 sets of 12 reps (each side)<br>
+Glute Bridges: 3 sets of 15 reps<br>
+Plank (hold for 30-60 seconds)</p>
+        </div>
+      </div>
+      </div>
+       <!-- 2 -->
+         <div class="content">
+
+      <span class="tag">Day 2: Cardio & Core</span>
+
+      <p>Warm-up (5-10 min): Brisk walk or light jog. </p>
+
+      <div class="box-container">
+
+        <div class="box">
+         
+          <p><span> Workout : </span>
+30 minutes of moderate-intensity cardio (cycling, brisk walking, swimming, or jogging)<br>
+Core circuit (repeat 2-3 times):<br>
+Mountain Climbers: 30 seconds<br>
+Russian Twists: 20 reps (each side)<br>
+Leg Raises: 15 reps<br>
+Bicycle Crunches: 20 reps</p><br>
+ <p><span> Cooldown:  </span> Walking and core stretches.</p>
+        </div>
+      </div>
+      </div>
+       <!-- 3 -->
+         <div class="content">
+      <span class="tag">Day 3: Rest or Active Recovery</span>
+
+      <p> </p>
+
+   <div class="box-container">
+
+        <div class="box">
+          <p><span>  </span> </p>
+          <p><span>  </span>
+</p>
+        </div>
+      </div>
+      </div>
+       <!-- 4 -->
+       <div class="content">
+  
+      <span class="tag">Day 4: Upper Body Strength & Flexibility</span>
+
+      <p>Warm-up (5-10 min): Arm swings, shoulder rolls, dynamic stretches. </p>
+
+      <div class="box-container">
+
+        <div class="box">
+          
+          <p><span> Workout : </span>
+Dumbbell Shoulder Press: 3 sets of 12 reps<br>
+Bicep Curls: 3 sets of 15 reps<br>
+Tricep Dips: 3 sets of 10-12 reps<br>
+Push-ups: 3 sets of 10-12 reps (or wall push-ups)</p>
+<p><span> Cooldown: </span> Arm, shoulder, and chest stretches.</p>
+        </div>
+      </div>
+      </div>
+       <!-- 5 -->
+         <div class="content">
+    
+      <span class="tag">Day 5: Cardio & Lower Body</span>
+
+      <p># </p>
+
+      <div class="box-container">
+
+        <div class="box">
+          <p><span> Warm-up (5-10 min):  </span> Light jogging or jump rope.</p>
+          <p><span> Workout : </span>
+30-40 minutes of cycling, running, or swimming<br>
+Lower body strength circuit (repeat 2-3 times):<br>
+Lunges: 12 reps each side<br>
+Step-ups (on a bench or stair): 12 reps each leg<br>
+Calf Raises: 15 reps<br>
+Side Lunges: 12 reps each side</p>
+<p><span> Cooldown:  </span> Stretch quads, hamstrings, and calves.</p>
+        </div>
+      </div>
+      </div>  
+      
+ <!-- 6 -->
+         <div class="content">
+    
+      <span class="tag">Day 6: Yoga for Flexibility & Mindfulness</span>
+
+      <p># </p>
+
+      <div class="box-container">
+
+        <div class="box">
+          
+          <p><span> Workout : </span>
+30 minutes of yoga, focusing on balance, flexibility, and deep breathing. Poses to include:<br>
+Downward Dog<br>
+Child’s Pose<br>
+Cobra Stretch<br>
+Warrior I and II<br>
+Cat-Cow<br>End with 5-10 minutes of deep breathing or guided meditation.</p>
+        </div>
+      </div>
+      </div>  
+    </div>
+    </section>
+<!-- about section ends -->
+
+
+
+<!-- Nutrition section starts -->
+<section class="experience" id="experience">
+
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Nutrition Information </h2>
+
+  <div class="timeline">
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Macronutrients (Macros)</h2>
+        </div>
+        <div class="desc">
+            <h3>A. Carbohydrates</h3>
+            <h3>B. Proteins</h3>
+            <h3>C. Fats</h3>
+           
+        </div>
+      </div>
+ </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Micronutrients (Vitamins and Minerals)</h2>
+        </div>
+        <div class="desc">
+            <h3>A. Essential Vitamins</h3>
+           <h3>B. Essential Minerals</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Hydration</h2>
+        </div>
+        <div class="desc">
+            <h3></h3>
+            <p></p>
+        </div>
+      </div>
+</div>
+       <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Balanced Diet for Wellness</h2>
+        </div>
+        <div class="desc">
+            <h3>A. The Plate Method</h3>
+            <h3>B. Meal Planning Tips</h3>
+        
+        </div>
+      </div>
+      </div>
+       <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Special Diets and Considerations</h2>
+        </div>
+        <div class="desc">
+            <h3>A. Vegan and Vegetarian Diets</h3>
+            <h3>B. Gluten-Free Diet</h3>
+            <h3>C. Low-Carb Diets</h3>
+        </div>
+      </div>
+      </div>
+      <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Mindful Eating Habits</h2>
+        </div>
+        <div class="desc">
+            <h3>A. Portion Control</h3>
+            <h3>B. Eat Slowly</h3>
+            <h3>C. Listen to Your Body</h3>
+            <h3>D. Avoid Emotional Eating</h3>
+            
+        </div>
+      </div>
+      
+    </div>
+
+  <div class="morebtn">
+    <a href="#" class="btn"><span>View All</span>
+      <i class="fas fa-arrow-right"></i>
+  </a>
+  </div>
+
+</div>
+
+</section>
+<!-- experience section ends -->
+<!-- skills section ends -->
+
+
+
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+
+  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <img draggable="false" th:src="@{/images/contact1.png}" alt="">
+      </div>
+      <form id="contact-form" th:action="@{/contact}" method="post">
+
+        <div class="form-group">
+          <div class="field">
+            <input type="text" name="name" placeholder="Name" required>
+            <i class='fas fa-user'></i>
+          </div>
+          <div class="field">
+            <input type="text" name="email" placeholder="Email" required>
+            <i class='fas fa-envelope'></i>
+          </div>
+          <div class="field">
+            <input type="text" name="phone" placeholder="Phone">
+            <i class='fas fa-phone-alt'></i>
+          </div>
+          <div class="message">
+            <textarea placeholder="Message" name="message" required></textarea>
+            <i class="fas fa-comment-dots"></i>
+          </div>
+        </div>
+        <div class="button-area">
+          <button type="submit">Submit <i class="fa fa-paper-plane"></i></button>
+        </div>
+      </form>
+      <p th:if="${error3}" th:text="${error3}" style="color: red;  text-align: center;
+      "></p>
+      <p th:if="${message3}" th:text="${message3}" style="color: green;  text-align: center;
+      "></p>
+    </div>
+  </div>
+</section>
+<!-- contact section ends -->
+
+
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+      <a href="#about"><i class="fas fa-chevron-circle-right"></i> Workout Plans</a>
+      <a href="#experience"><i class="fas fa-chevron-circle-right"></i> Nutrition Information</a>
+    </div>
+ <div class="box">
+      <h3></h3>
+      <a href=""><i class=""></i> </a>
+     
+    </div>
+     <div class="box">
+      <h3></h3>
+      <a href=""><i class=""></i> </a>
+     
+    </div>
+    <div class="box">
+      <h3>contact info</h3>
+      <p> <i class="fas fa-phone"></i>+91 800-635-7434</p>
+      <p> <i class="fas fa-envelope"></i>ram8006357434@gmail.com</p>
+      <p> <i class="fas fa-map-marked-alt"></i>Agra,UP, India-283102</p>
+      <div class="share">
+
+        <a href="https://www.linkedin.com/in/jigar-sable" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+        <a href="https://github.com/jigar-sable" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+        <a href="mailto:jigarsable21@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+        <a href="https://twitter.com/jigar_sable" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+        <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/ram-kumar-1a43a925a"> Ram Kumar</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+
+
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script type="text/javascript" th:src="@{/jss/particles.min.js}"></script>
+<script type="text/javascript" th:src="@{/jss/app.js}"></script>
+<script type="text/javascript" th:src="@{/jss/script.js}"></script>
+
+
+</body>
+</html>
+
+
+
+
